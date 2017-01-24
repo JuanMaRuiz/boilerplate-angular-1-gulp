@@ -2,7 +2,7 @@
 A simple template for begin shortly a project with Angular, Sass and LiveReload preconfigured.
 
 ### Version
-0.1.0
+0.0.1
 
 This is project is a simple template for begin shortly a project with:
 
@@ -18,7 +18,6 @@ This is project is a simple template for begin shortly a project with:
 	```sh
 	$ npm install && bower install
 	```
-	> Maybe you'll need to run npm install grunt-contrib-watch to get the last version of grunt-contrib-watch package. [More info](https://github.com/gruntjs/grunt-contrib-watch)
 
 * Run your project with:
 
@@ -40,9 +39,10 @@ Installing dependencies with bower you'll download:
 .
 ├── app/
 |   |
-|   |-lib/
-|
-├── dist/
+|   ├──lib/
+|   ├──css/
+|   ├──scripts/
+|   ├──partials/
 ├── .editorconfig
 ├── .gitignore
 ├── .jshintrc
@@ -53,6 +53,10 @@ Installing dependencies with bower you'll download:
 
 ```
 
+### TODO LIST
+* Seems reload is not working correctly so must to be fixed.
+* Configure tests and add more tests.
+* Add task to generate source for production.
 
 License
 -------

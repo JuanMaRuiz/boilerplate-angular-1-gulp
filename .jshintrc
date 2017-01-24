@@ -7,7 +7,7 @@
 	"esnext": true,
 	"immed": true,
 	"jquery": true,
-	"latedef": true,
+	"latedef": false, // This option prohibits the use of a variable before it was defined
 	"newcap": true,
 	"noarg": true,
 	"node": true,

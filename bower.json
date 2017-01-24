@@ -12,6 +12,9 @@
   ],
   "homepage": "https://github.com/JuanMaRuiz/boilerplate-angular-1-gulp",
   "moduleType": [],
-  "dependencies": {},
+  "dependencies": {
+    "angular": "^1.6.1",
+    "angular-ui-router": "^0.4.2"
+  },
   "devDependencies": {}
 }

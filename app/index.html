@@ -9,7 +9,9 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <link rel="stylesheet" href="css/style.css">
+    <!-- inject:css -->
+   <link rel="stylesheet" href="/css/style.css">
+   <!-- endinject -->
 
     <title>Bazinga Angular App</title>
 
@@ -21,6 +23,11 @@
 </head>
 
 <body ng-app="bazingaApp">
+<!--[if lt IE 8]>
+   <p class="browsehappy">
+     Estás usando un navegador <strong>desactualizado</strong>. Por favor <a href="http://browsehappy.com/">actualiza tu navegador</a> Para mejorar la experiencia..
+   </p>
+<![endif]-->
     <div class="wrapper">
         <nav>
           <ul class="nav-bar">
@@ -32,12 +39,14 @@
     </div>
     <!-- /#wrapper -->
     <!-- bower:js -->
-    <script src="/lib/angular.js"></script>
-    <script src="/lib/angular-ui-router.js"></script>
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular-ui-router/release/angular-ui-router.js"></script>
     <!-- endbower -->
 
     <!-- Global Functions -->
+    <!-- inject:js -->
     <script src="/scripts/app.js"></script>
+    <!-- endinject -->
 
 <link href="//fonts.googleapis.com/css?family=Bitter:400,700|Oxygen:400,700" rel="stylesheet">
 </body>

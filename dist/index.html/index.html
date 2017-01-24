@@ -9,18 +9,25 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
+    <!-- inject:css -->
+   <!-- endinject -->
     <link rel="stylesheet" href="css/style.css">
 
     <title>Bazinga Angular App</title>
 
     <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
 </head>
 
 <body ng-app="bazingaApp">
+<!--[if lt IE 8]>
+   <p class="browsehappy">
+     Estás usando un navegador <strong>desactualizado</strong>. Por favor <a href="http://browsehappy.com/">actualiza tu navegador</a> Para mejorar la experiencia..
+   </p>
+<![endif]-->
     <div class="wrapper">
         <nav>
           <ul class="nav-bar">
@@ -29,17 +36,21 @@
           </ul>
         </nav>
         <section ui-view></section>
+
+        aerwqetwte
     </div>
     <!-- /#wrapper -->
     <!-- bower:js -->
-    <script src="js/lib/angular.js"></script>
-    <script src="js/lib/angular-ui-router.js"></script>
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/jquery/dist/jquery.js"></script>
+    <script src="lib/bootstrap/dist/js/bootstrap.js"></script>
     <!-- endbower -->
 
+    <!-- inject:js -->
+    <!-- endinject -->
     <!-- Global Functions -->
-    <script src="js/app.js"></script>
+    <script src="/scripts/app.js"></script>
 
-<link href="https://fonts.googleapis.com/css?family=Bitter:400,700|Oxygen:400,700" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Bitter:400,700|Oxygen:400,700" rel="stylesheet">
 </body>
 </html>
-

@@ -2,7 +2,7 @@
   'use strict';
   angular
     .module('bazingaApp', ['ui.router'])
-    .config(configuration)
+    .config(configuration);
 
     configuration.$inject = ['$stateProvider', '$urlRouterProvider'];
 
