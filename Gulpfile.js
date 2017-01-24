@@ -18,7 +18,7 @@ gulp.task('html', function() {
 });
 
 gulp.task('watch', function () {
-  gulp.watch(['./app/**/*.scss'], ['html']);
+  gulp.watch(['./app/**/*.html'], ['html']);
   gulp.watch(['./app/scss/**/*.scss'], ['sass']);
   gulp.watch(['./app/scripts/**/*.js', './Gulpfile.js'] ['jshint']);
 });
