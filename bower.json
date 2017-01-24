@@ -1,0 +1,17 @@
+{
+  "name": "simple-project-template",
+  "description": "Simple Project Template for Angular Projects",
+  "main": "index.html",
+  "author": {
+    "name": "JuanMa Ruiz"
+  },
+  "license": "MIT",
+  "keywords": [
+    "template",
+    "angular"
+  ],
+  "homepage": "https://github.com/JuanMaRuiz/boilerplate-angular-1-gulp",
+  "moduleType": [],
+  "dependencies": {},
+  "devDependencies": {}
+}

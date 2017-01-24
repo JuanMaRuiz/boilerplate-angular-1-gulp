@@ -1,0 +1,44 @@
+language: node_js
+sudo: false
+node_js:
+  - '4.4'
+
+cache:
+  directories:
+    - node_modules
+    - bower_components
+env:
+  matrix:
+    - JOB=ci-checks
+    - JOB=unit BROWSER_PROVIDER=saucelabs
+    - JOB=docs-e2e BROWSER_PROVIDER=saucelabs
+    - JOB=e2e TEST_TARGET=jqlite BROWSER_PROVIDER=saucelabs
+    - JOB=e2e TEST_TARGET=jquery BROWSER_PROVIDER=saucelabs
+  global:
+    - CXX=g++-4.8  # node 4 likes the G++ v4.8 compiler
+    - SAUCE_USERNAME=angular-ci
+    - SAUCE_ACCESS_KEY=9b988f434ff8-fbca-8aa4-4ae3-35442987
+    - LOGS_DIR=/tmp/angular-build/logs
+    - BROWSER_PROVIDER_READY_FILE=/tmp/browsersprovider-tunnel-ready
+
+install:
+  # Check the size of caches
+  - du -sh ./node_modules ./bower_components/ ./docs/bower_components/ || true
+  # - npm config set registry http://23.251.144.68
+  # Disable the spinner, it looks bad on Travis
+  - npm config set spin false
+  # Log HTTP requests
+  - npm config set loglevel http
+  #- npm install -g npm@2.5
+  # Install npm dependencies and ensure that npm cache is not stale
+  - npm install
+
+before_script:
+  - ./scripts/travis/before_build.sh
+
+script:
+  - ./scripts/travis/build.sh
+
+after_script:
+  - ./scripts/travis/tear_down_browser_provider.sh
+  - ./scripts/travis/print_logs.sh
